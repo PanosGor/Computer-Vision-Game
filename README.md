@@ -129,7 +129,7 @@ early_stop = EarlyStopping(monitor='val_loss', min_delta=0, patience=2, verbose=
 history2 = model.fit(train_batches, epochs=6, callbacks=[reduce_lr, early_stop],  validation_data = test_batches)#, checkpoint])
 imgs, labels = next(train_batches)
 ```
-**As can be seen from figure 7 for compiling the model:**
+**As can be seen from code block above for compiling the model:**
 - *Two different optimization algorithms are used – SGD (stochastic gradient descent, that means the weights are updated at every training instance) and Adam (combination of Adagrad and RMSProp) is used. SGD observed to give higher accuracies*
 - *Because of the categories of the hand gestures (0,1,2,3,4,5) a categorical_crossentropy was used*
 - *6 Epochs were chosen for training the model but more could also be used in order to increase accuracy*
