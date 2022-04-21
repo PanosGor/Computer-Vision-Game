@@ -59,8 +59,10 @@ For the creation of the dataset *create_gesture_data.py* can be used in order to
 The first step was to create a ROI where the user would put in her hand in order to take the screenshots.
 After that, the same methodologies from model 1 (described earlier) were used in order to calculate the background and grab the segment of the hand.
 Once the hand is isolated the program starts saving the images in a local folder (The user can specify how many images/frames wants to capture).
+
 ![image](https://user-images.githubusercontent.com/82097084/164475824-6ae05fb9-d16a-48c8-8087-839867824491.png)
-*Figure 2-Templates generated to be used for training and testing the CNN model*
+
+*Templates generated to be used for training and testing the CNN model*
 
 
 
