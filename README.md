@@ -30,6 +30,12 @@ To do that first the program calculates the absolute difference between the back
 
 Once the hand enters the ROI, then the program can detect the change and apply some thresholding techniques to isolate the hand and the hand segment.
 Binary thresholding is used to grab the hand segment from the ROI, in order to calculate the contour around the white hand against a black background.
+Once we have a thresholded hand segment the Convex Hull method is used to draw a polygon around the hand.
+
+![image](https://user-images.githubusercontent.com/82097084/164473462-f419f3c0-8ad2-4edf-a140-5d5d4ffd516d.png)
+
+Then the center of the hand is calculated against the angle of the outer points of the polygon to infer a finger count.
+Each point of the polygon ideally should count for a finger. By calculating the distance of the point from the center, the program identifies if the finger is extended.
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
