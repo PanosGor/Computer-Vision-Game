@@ -75,7 +75,25 @@ The model that was created for the training of the dataset is presented below
 
 *Folders and Subfolders for the CNN model per class*
 
+''' model = Sequential()
 
+model.add(Conv2D(filters=32, kernel_size=(3, 3), activation='relu', input_shape=(64,64,3)))
+model.add(MaxPool2D(pool_size=(2, 2), strides=2))
+
+model.add(Conv2D(filters=64, kernel_size=(3, 3), activation='relu', padding = 'same'))
+model.add(MaxPool2D(pool_size=(2, 2), strides=2))
+
+model.add(Conv2D(filters=128, kernel_size=(3, 3), activation='relu', padding = 'valid'))
+model.add(MaxPool2D(pool_size=(2, 2), strides=2))
+
+model.add(Flatten())
+
+model.add(Dense(64,activation ="relu"))
+model.add(Dense(128,activation ="relu"))
+#model.add(Dropout(0.2))
+model.add(Dense(128,activation ="relu"))
+#model.add(Dropout(0.3))
+model.add(Dense(6,activation ="softmax"))'''
 
 
 
