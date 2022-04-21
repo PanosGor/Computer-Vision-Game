@@ -14,7 +14,7 @@ A lot of similar research can be found around this topic and there is a big vari
 
 The two sub methods were used parallel to each other, the first for player 1 and the second for player 2.
 
-*First Approach*
+**First Approach**
 ![image](https://user-images.githubusercontent.com/82097084/164471035-c3323f2a-2e44-4dcd-8554-5c09e9499b01.png)
 
 The first step was to create a method that identifies a region where the user may put in her hand and also recognizes that a hand has entered this region.
@@ -41,7 +41,16 @@ In order to account for lines coming from the wrist (the points towards the bott
 Then the intersection of the extreme points is calculated as the center of the hand. 
 Next the distance for the extreme point furthest away from the center of the hand is calculated. By using a ratio (0.8) of that distance as a radius, a circle is created around the circle.
 
-Any points outside if the circle and far away from the bottom count as extended fingers.
+Any points outside if the circle and far away from the bottom, count as extended fingers.
+
+**Second Approach**
+
+For Player 2 a model was developed by using Convolutional Neural Networks.
+The model is divided into three parts 
+-	Creating the dataset, 
+-	Training the model on the dataset 
+-	and using the model in order to predict the data.
+
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
