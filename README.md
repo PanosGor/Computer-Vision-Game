@@ -80,8 +80,6 @@ The model that was created for the training of the dataset is presented below
 
 
 
-
-
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
 rock_papper_scissors.py is Main program to run for playing the game no changes in the code required for the program to run
