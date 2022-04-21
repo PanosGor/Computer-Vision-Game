@@ -91,9 +91,7 @@ model.add(Flatten())
 
 model.add(Dense(64,activation ="relu"))
 model.add(Dense(128,activation ="relu"))
-#model.add(Dropout(0.2))
 model.add(Dense(128,activation ="relu"))
-#model.add(Dropout(0.3))
 model.add(Dense(6,activation ="softmax"))
 ```
 
@@ -126,7 +124,7 @@ model.compile(optimizer=SGD(learning_rate=0.001), loss='categorical_crossentropy
 reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=1, min_lr=0.0005)
 early_stop = EarlyStopping(monitor='val_loss', min_delta=0, patience=2, verbose=0, mode='auto')
 
-history2 = model.fit(train_batches, epochs=6, callbacks=[reduce_lr, early_stop],  validation_data = test_batches)#, checkpoint])
+history2 = model.fit(train_batches, epochs=6, callbacks=[reduce_lr, early_stop],  validation_data = test_batches)
 imgs, labels = next(train_batches)
 ```
 **As can be seen from code block above for compiling the model:**
