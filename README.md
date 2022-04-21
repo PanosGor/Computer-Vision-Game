@@ -51,11 +51,21 @@ The model is divided into three parts
 -	Training the model on the dataset 
 -	and using the model in order to predict the data.
 
-It would be better to develop your own dataset instead of downloading one from the internet, in order to have more control over the model and understand the process better.
+It would be better to develop the training and testing dataset instead of downloading one from the internet, in order to have more control over the model and understand the process better.
 
 **Dataset Creation**
 
-For the creation of the dataset create_gesture_data.py can be used in order to capture multiple hand screenshots for each hand sign and create a training and a testing dataset.
+For the creation of the dataset *create_gesture_data.py* can be used in order to capture multiple hand screenshots for each hand sign and create a training and a testing dataset.
+The first step was to create a ROI where the user would put in her hand in order to take the screenshots.
+After that, the same methodologies from model 1 (described earlier) were used in order to calculate the background and grab the segment of the hand.
+Once the hand is isolated the program starts saving the images in a local folder (The user can specify how many images/frames wants to capture).
+![image](https://user-images.githubusercontent.com/82097084/164475824-6ae05fb9-d16a-48c8-8087-839867824491.png)
+*Figure 2-Templates generated to be used for training and testing the CNN model*
+
+
+
+
+
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
