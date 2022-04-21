@@ -51,6 +51,11 @@ The model is divided into three parts
 -	Training the model on the dataset 
 -	and using the model in order to predict the data.
 
+It would be better to develop your own dataset instead of downloading one from the internet, in order to have more control over the model and understand the process better.
+
+*Dataset Creation*
+
+For the creation of the dataset create_gesture_data.py can be used in order to capture multiple hand screenshots for each hand sign and create a training and a testing dataset.
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
