@@ -20,12 +20,16 @@ The two sub methods were used parallel to each other, the first for player 1 and
 The first step was to create a method that identifies a region where the user may put in her hand and also recognizes that a hand has entered this region.
 To achieve that, two Regions of Interest were identified for each hand (ROI_1, ROI_2).
 
-*Method 1*
+*Method 1:*
 The program updates a running average of the background values in the ROIs. More specifically, for differentiating between the background, it calculates the
 accumulated weighted avg for the background and then subtract this from the frames that contain some object in front of the background that can be distinguished as foreground. 
 This is done by calculating the accumulated weight for the first 60 frames. 
 After the accumulated average for the background is calculated it is subtracted from every frame taken after the first 60 to find any object that covers the background. 
-This will allow the program to detect new objects such as a hand entering the ROIs. 
+This will allow the program to detect new objects such as a hand entering the ROIs.
+To do that first the program calculates the absolute difference between the background and the frame and then apply Binary Threshold in order to grab the contours from the image.
+
+Once the hand enters the ROI, then the program can detect the change and apply some thresholding techniques to isolate the hand and the hand segment.
+Binary thresholding is used to grab the hand segment from the ROI, in order to calculate the contour around the white hand against a black background.
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
