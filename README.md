@@ -115,7 +115,7 @@ The ***training parameters*** of the model are the following:
 - *Rectified Linear Units or “relu” was used as it is a widely used activation function in CNN. Any other activation function could be chosen without expecting to alter the accuracy of the model predictions significantly*
 - *Then the data are flattened in order to be passed through a dense layer. 4 Dense layers are added with the last Dense layer having 6 nodes which is equal to the number of labels of the dataset*
 
-**The following figure presents the rest of the parameters of the model.**
+**The following code presents the rest of the parameters of the model.**
 
 ```
 model.compile(optimizer=Adam(learning_rate=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
@@ -129,7 +129,13 @@ early_stop = EarlyStopping(monitor='val_loss', min_delta=0, patience=2, verbose=
 history2 = model.fit(train_batches, epochs=6, callbacks=[reduce_lr, early_stop],  validation_data = test_batches)#, checkpoint])
 imgs, labels = next(train_batches)
 ```
-
+**As can be seen from figure 7 for compiling the model:**
+- *Two different optimization algorithms are used – SGD (stochastic gradient descent, that means the weights are updated at every training instance) and Adam (combination of Adagrad and RMSProp) is used. SGD observed to give higher accuracies*
+- *Because of the categories of the hand gestures (0,1,2,3,4,5) a categorical_crossentropy was used*
+- *6 Epochs were chosen for training the model but more could also be used in order to increase accuracy*
+- *Reduce learning rate function of keras was used to measure if the model has stopped improving after patience =1 number of epochs. In which case the learning rate will be reduced to 0.0001*
+- *EarlyStopping’s key objective is to minimize the loss as the model.fit() checks at the end of every epoch whether the loss is no longer decreasing in which case it terminates*
+- *The overall accuracy of the model was 83.33%*
 
 
 
