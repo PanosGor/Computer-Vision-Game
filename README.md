@@ -99,7 +99,10 @@ model.add(Dense(6,activation ="softmax"))
 
 The ***training parameters*** of the model are the following:
 
--A simple sequential model was used for training the model. Because a sequential model is more appropriate for a plain stack of layers where each layer has exactly one input tensor and one output. 
+- *A simple sequential model was used for training the model. Because a sequential model is more appropriate for a plain stack of layers where each layer has exactly one input tensor and one output*
+- *The model consists of 7 layers including the output layer*
+- *With regards to the Conv2D parameters layers closer to the input image use fewer convolutional filters while layers closer to the prediction use more filters, doubling the number of filters for each layer *
+- *Filters determine the number of kernels to convolve with the input volume. Each of these operations produces a 2D activation map *
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
