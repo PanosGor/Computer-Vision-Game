@@ -11,6 +11,7 @@ A lot of similar research can be found around this topic and there is a big vari
 
 
 **Two different methods were used for the hand/sign detection.**
+
 The two sub methods were used parallel to each other, the first for player 1 and the second for player 2.
 
 
