@@ -36,6 +36,12 @@ Once we have a thresholded hand segment the Convex Hull method is used to draw a
 
 Then the center of the hand is calculated against the angle of the outer points of the polygon to infer a finger count.
 Each point of the polygon ideally should count for a finger. By calculating the distance of the point from the center, the program identifies if the finger is extended.
+Depending on whether the fingers are extended those points are closer or further away from the center of the hand.
+In order to account for lines coming from the wrist (the points towards the bottom of the polygon) the most extreme points of the polygon are calculated (top, bottom, left, right).
+Then the intersection of the extreme points is calculated as the center of the hand. 
+Next the distance for the extreme point furthest away from the center of the hand is calculated. By using a ratio (0.8) of that distance as a radius, a circle is created around the circle.
+
+Any points outside if the circle and far away from the bottom count as extended fingers.
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
