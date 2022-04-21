@@ -65,6 +65,19 @@ Once the hand is isolated the program starts saving the images in a local folder
 *Templates generated to be used for training and testing the CNN model*
 
 
+**Training the model **
+
+For the training ImageDataGenerator of Keras was used in order to load the train and test data. 
+To classify the data the names and numbers of the folders where the data were saved were used.
+The model that was created for the training of the dataset is presented below 
+
+![image](https://user-images.githubusercontent.com/82097084/164476363-7bfdc2ea-2982-40a6-80b7-118614609eba.png)
+
+*Folders and Subfolders for the CNN model per class*
+
+
+
+
 
 
 
