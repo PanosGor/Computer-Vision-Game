@@ -115,6 +115,24 @@ The ***training parameters*** of the model are the following:
 - *Rectified Linear Units or “relu” was used as it is a widely used activation function in CNN. Any other activation function could be chosen without expecting to alter the accuracy of the model predictions significantly*
 - *Then the data are flattened in order to be passed through a dense layer. 4 Dense layers are added with the last Dense layer having 6 nodes which is equal to the number of labels of the dataset*
 
+**The following figure presents the rest of the parameters of the model.**
+
+```
+model.compile(optimizer=Adam(learning_rate=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
+reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=1, min_lr=0.0001)
+early_stop = EarlyStopping(monitor='val_loss', min_delta=0, patience=2, verbose=0, mode='auto')
+
+model.compile(optimizer=SGD(learning_rate=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
+reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=1, min_lr=0.0005)
+early_stop = EarlyStopping(monitor='val_loss', min_delta=0, patience=2, verbose=0, mode='auto')
+
+history2 = model.fit(train_batches, epochs=6, callbacks=[reduce_lr, early_stop],  validation_data = test_batches)#, checkpoint])
+imgs, labels = next(train_batches)
+```
+
+
+
+
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
 rock_papper_scissors.py is Main program to run for playing the game no changes in the code required for the program to run
