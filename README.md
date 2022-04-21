@@ -14,6 +14,8 @@ A lot of similar research can be found around this topic and there is a big vari
 
 The two sub methods were used parallel to each other, the first for player 1 and the second for player 2.
 
+![image](https://user-images.githubusercontent.com/82097084/164471035-c3323f2a-2e44-4dcd-8554-5c09e9499b01.png)
+
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
