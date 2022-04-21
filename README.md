@@ -150,10 +150,10 @@ An assumption is made that the players will not change their hand gesture in the
 The last frame of the game decides the winner. The rules are the same as the traditional game (Paper beats Rock e.t.c).
 Function winner_check() checks which one of the players wins according to their hand gestures of the last frame. A message appears on the screen with the winner and the program ends.
 
+
+
+
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
-
 rock_papper_scissors.py is Main program to run for playing the game no changes in the code required for the program to run
-
 rock_papper_scissors_model.h5 is the trained CNN model that needs to be included in rock_papper_scissors.py
-
 in order for rock_papper_scissors.py to run properly both rock_papper_scissors_model.h5 and rock_papper_scissors.py need to be in the same directory 
