@@ -112,7 +112,8 @@ The ***training parameters*** of the model are the following:
 
 ![image](https://user-images.githubusercontent.com/82097084/164479831-61341f72-b65e-4dec-a21a-97cdc15f8a60.png)
 
-
+- *Rectified Linear Units or “relu” was used as it is a widely used activation function in CNN. Any other activation function could be chosen without expecting to alter the accuracy of the model predictions significantly*
+- *Then the data are flattened in order to be passed through a dense layer. 4 Dense layers are added with the last Dense layer having 6 nodes which is equal to the number of labels of the dataset*
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
