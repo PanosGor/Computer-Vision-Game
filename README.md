@@ -1,13 +1,17 @@
 # Rock Paper Scissors Game
 The goal of this project is to create a Rock, Scissor, Paper game in python, 
 which will be processed in a live video and it will be able to give instant results to the users. 
-The main idea is to create a program, which turns on the camera, creates two boxes which are the points of interest and then the two users put their hands inside, 
+The main idea is to create a program, which turns on the camera, creates two boxes which are the points of interest and then the two players put their hands inside, 
 having Rock, Paper or Scissor displayed. 
 Then the program will be able to recognize these gestures and it will print the result of the winner. 
+This is not an easy task, because the computer cannot recognize human hands or specific signs that a human’s hand can create
+Some difficulties that might occur are the variety of lighting conditions, the different backgrounds, the hand gesture identification and more
+
+A lot of similar research can be found around this topic and there is a big variety of approaches and methods for the same problem
 
 
-
-
+**Two different methods were used for the hand/sign detection.**
+The two sub methods were used parallel to each other, the first for player 1 and the second for player 2.
 
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
