@@ -14,11 +14,18 @@ A lot of similar research can be found around this topic and there is a big vari
 
 The two sub methods were used parallel to each other, the first for player 1 and the second for player 2.
 
-*First Approache*
+*First Approach*
 ![image](https://user-images.githubusercontent.com/82097084/164471035-c3323f2a-2e44-4dcd-8554-5c09e9499b01.png)
 
 The first step was to create a method that identifies a region where the user may put in her hand and also recognizes that a hand has entered this region.
-To achieve that, two Regions of Interest were identified for each hand (ROI_1, ROI_2). 
+To achieve that, two Regions of Interest were identified for each hand (ROI_1, ROI_2).
+
+*Method 1*
+The program updates a running average of the background values in the ROIs. More specifically, for differentiating between the background, it calculates the
+accumulated weighted avg for the background and then subtract this from the frames that contain some object in front of the background that can be distinguished as foreground. 
+This is done by calculating the accumulated weight for the first 60 frames. 
+After the accumulated average for the background is calculated it is subtracted from every frame taken after the first 60 to find any object that covers the background. 
+This will allow the program to detect new objects such as a hand entering the ROIs. 
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
