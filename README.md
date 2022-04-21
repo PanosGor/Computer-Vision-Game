@@ -137,7 +137,18 @@ imgs, labels = next(train_batches)
 - *EarlyStopping’s key objective is to minimize the loss as the model.fit() checks at the end of every epoch whether the loss is no longer decreasing in which case it terminates*
 - *The overall accuracy of the model was 83.33%*
 
+**Application of both models to the final algorithm**
 
+As was explained earlier a different methodology is used for each player. 
+Method 1 is used for player 1 and method 2 is used for player 2. Both methods “read” the player’s gesture inside their Region of Interest and predict the gesture according to their equivalent model used. 
+It is important to notice that even if the purpose of the game is to play Rock Paper Scissors both models have been created to predict the number of fingers of a hand. 
+In order to tailor the results of the model to the needs of the game, an improvisation was made in order to create a way that imitates the hand gestures of Rock, Paper and Scissors. 
+More specifically, 0 and 1 fingers stand for Rock, 2 and 3 stand for Scissors and 4 and 5 stand for Paper.
+When the program starts, a countdown appears that starts from 10 seconds. 
+When the clock is at the 2nd second a message appears on the screen (“Play”) and the players can make their choices. When the countdown reaches to 0 then the game terminates, and the winner is announced. 
+An assumption is made that the players will not change their hand gesture in the last second of the game.
+The last frame of the game decides the winner. The rules are the same as the traditional game (Paper beats Rock e.t.c).
+Function winner_check() checks which one of the players wins according to their hand gestures of the last frame. A message appears on the screen with the winner and the program ends.
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
