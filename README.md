@@ -104,6 +104,16 @@ The ***training parameters*** of the model are the following:
 - *With regards to the Conv2D parameters layers closer to the input image use fewer convolutional filters while layers closer to the prediction use more filters, doubling the number of filters for each layer*
 - *Filters determine the number of kernels to convolve with the input volume. Each of these operations produces a 2D activation map*
 
+![image](https://user-images.githubusercontent.com/82097084/164479477-ea46c899-b8e8-4e72-a14b-9cdeb31e409d.png)
+
+- *For each Conv2D a max pooling is used afterwards to reduce the spatial dimensions*
+- *A kernel size of 3x3 was chosen due to the small size of the input images (200, 200)*
+- *Keras has a variety of activation functions as can be seen in the following figure*
+
+![image](https://user-images.githubusercontent.com/82097084/164479831-61341f72-b65e-4dec-a21a-97cdc15f8a60.png)
+
+
+
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
 rock_papper_scissors.py is Main program to run for playing the game no changes in the code required for the program to run
