@@ -10,11 +10,11 @@ Some difficulties that might occur are the variety of lighting conditions, the d
 A lot of similar research can be found around this topic and there is a big variety of approaches and methods for the same problem
 
 
-##Two different methods were used for the hand/sign detection.
+## Two different methods were used for the hand/sign detection.
 
 The two sub methods were used parallel to each other, the first for player 1 and the second for player 2.
 
-###First Approach
+### First Approach
 ![image](https://user-images.githubusercontent.com/82097084/164471035-c3323f2a-2e44-4dcd-8554-5c09e9499b01.png)
 
 The first step was to create a method that identifies a region where the user may put in her hand and also recognizes that a hand has entered this region.
@@ -43,7 +43,7 @@ Next the distance for the extreme point furthest away from the center of the han
 
 Any points outside if the circle and far away from the bottom, count as extended fingers.
 
-###Second Approach
+### Second Approach
 
 For Player 2 a model was developed by using Convolutional Neural Networks.
 The model is divided into three parts 
@@ -53,7 +53,7 @@ The model is divided into three parts
 
 It would be better to develop your own dataset instead of downloading one from the internet, in order to have more control over the model and understand the process better.
 
-*Dataset Creation*
+**Dataset Creation**
 
 For the creation of the dataset create_gesture_data.py can be used in order to capture multiple hand screenshots for each hand sign and create a training and a testing dataset.
 
