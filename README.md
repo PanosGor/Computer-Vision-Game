@@ -97,8 +97,9 @@ model.add(Dense(128,activation ="relu"))
 model.add(Dense(6,activation ="softmax"))
 ```
 
+The ***training parameters*** of the model are the following:
 
-
+-A simple sequential model was used for training the model. Because a sequential model is more appropriate for a plain stack of layers where each layer has exactly one input tensor and one output. 
 
 Folder "Methods" contains the dataset and the two Python scripts that were ysed for gathering the data and training the model 
 
